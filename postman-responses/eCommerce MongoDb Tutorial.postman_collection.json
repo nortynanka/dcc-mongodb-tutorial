@@ -6,13 +6,13 @@
 	},
 	"item": [
 		{
-			"name": "POST a new product",
+			"name": "POST new product",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\t\"name\": \"Blaster\",\r\n\t\"description\": \"Rooty-tooty point 'n shooty. But with lasers.\",\r\n\t\"category\": \"Fantasy Weapons\",\r\n\t\"price\": 599.99\r\n}",
+					"raw": "{\r\n\t\"name\": \"The Elder Wand\",\r\n\t\"description\": \"Originally belonging to the most powerful dark wizard before Voldemort, Grindelwald. The most powerful wand in the world.\",\r\n\t\"category\": \"Magic Weapons\",\r\n\t\"price\": 899999.99\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -121,6 +121,133 @@
 						"api",
 						"products",
 						"62686390acb79cf77a941af0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST new user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"name\": \"Patrick Star\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3007/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3007",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET all users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3007/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3007",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST product to user shopping cart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3007/api/users/6268c0360b6c2da7bb6e26a8/shoppingcart/6268b55309168f30ccde4881",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3007",
+					"path": [
+						"api",
+						"users",
+						"6268c0360b6c2da7bb6e26a8",
+						"shoppingcart",
+						"6268b55309168f30ccde4881"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT product in shopping cart",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"name\": \"The Golden Compass\",\r\n\t\"description\": \"It communicates with Dust to find truthful answers to one's most fervent questions.\",\r\n\t\"category\": \"His Dark Materials\",\r\n\t\"price\": 39999.99\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3007/api/users/6268c0360b6c2da7bb6e26a8/shoppingcart/6268b55309168f30ccde4881",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3007",
+					"path": [
+						"api",
+						"users",
+						"6268c0360b6c2da7bb6e26a8",
+						"shoppingcart",
+						"6268b55309168f30ccde4881"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE product in shopping cart",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3007/api/users/6268c0360b6c2da7bb6e26a8/shoppingcart/6268b55309168f30ccde4881",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3007",
+					"path": [
+						"api",
+						"users",
+						"6268c0360b6c2da7bb6e26a8",
+						"shoppingcart",
+						"6268b55309168f30ccde4881"
 					]
 				}
 			},

@@ -64,7 +64,7 @@ router.put("/:userId/shoppingcart/:productId", async (req, res) => {
     if (!product)
       return res
         .status(400)
-        .send(`The product does not exist in the shopping cart!`);
+        .send(`The product ${req.params.productId} does not exist in user ${req.params.userId}'s shopping cart!`);
     product.name = req.body.name;
     product.description = req.body.description;
     product.category = req.body.category;
@@ -89,7 +89,7 @@ router.delete("/:userId/shoppingcart/:productId", async (req, res) => {
     if (!product)
       return res
         .status(400)
-        .send(`The product does not exist in the shopping cart!`);
+        .send(`The product ${req.params.productId} does not exist in user ${req.params.userId}'s shopping cart!`);
 
     product = await product.remove();
     await user.save();

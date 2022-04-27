@@ -35,7 +35,7 @@ router.get("/:productId", async (req, res) => {
     if (!product)
       return res
         .status(400)
-        .send(`Product with ObjectID ${req.params.productId} does not exist!`);
+        .send(`Product with ID ${req.params.productId} does not exist!`);
     return res.status(200).send(product);
   } catch (error) {
     return res.status(500).send(`Internal Server Error: ${error}`);
@@ -54,7 +54,7 @@ router.put("/:productId", async (req, res) => {
     if (!product)
       return res
         .status(400)
-        .send(`Product with ObjectID ${req.params.productId} does not exist!`);
+        .send(`Product with ID ${req.params.productId} does not exist!`);
     return res.send(product);
   } catch (error) {
     return res.status(500).send(`Internal Server Error: ${error}`);
@@ -67,7 +67,7 @@ router.delete("/:productId", async (req, res) => {
     if (!product)
       return res
         .status(400)
-        .send(`Product with ObjectID ${req.params.productId} does not exist!`);
+        .send(`Product with ID ${req.params.productId} does not exist!`);
     return res.send(product);
   } catch (error) {
     return res.status(500).send(`Internal Server Error: ${error}`);
