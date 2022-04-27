@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "b8af752f-f6bd-4f37-8f87-e3d4e4294428",
+		"name": "eCommerce MongoDb Tutorial",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST a new product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"name\": \"Blaster\",\r\n\t\"description\": \"Rooty-tooty point 'n shooty. But with lasers.\",\r\n\t\"category\": \"Fantasy Weapons\",\r\n\t\"price\": 599.99\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3007/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3007",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET all products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3007/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3007",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET product by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3007/api/products/62686390acb79cf77a941af0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3007",
+					"path": [
+						"api",
+						"products",
+						"62686390acb79cf77a941af0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT existing product by id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"name\": \"Blaster\",\r\n\t\"description\": \"Rooty-tooty point 'n shooty. But with lasers.\",\r\n\t\"category\": \"Fantasy Weapons\",\r\n\t\"price\": 599.99\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3007/api/products/62686390acb79cf77a941af0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3007",
+					"path": [
+						"api",
+						"products",
+						"62686390acb79cf77a941af0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE existing product by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3007/api/products/62686390acb79cf77a941af0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3007",
+					"path": [
+						"api",
+						"products",
+						"62686390acb79cf77a941af0"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
